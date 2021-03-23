@@ -1,3 +1,3 @@
 # Tää on mun hieno projekti
 
-Aattelin et teen varmaan **rytmipelin**, mutta saa nähdä mitä siitäkin __tulee_. 
+Aattelin et teen varmaan **rytmipelin**, mutta saa nähdä mitä siitäkin *tulee*. 
