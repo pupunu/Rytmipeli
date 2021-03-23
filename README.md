@@ -1,6 +1,6 @@
 # Tää on mun hieno *projekti*
 
-Aattelin et teen varmaan **rytmipelin**, mutta saa nähdä mitä siitäkin *tulee*. 
+Aattelin et teen varmaan [**rytmipelin**](https://www.youtube.com/watch?v=xdcKicUYVek), mutta saa nähdä mitä siitäkin *tulee*. 
 
 ## Tehtävät 
 ### Viikko 1
@@ -9,4 +9,3 @@ Aattelin et teen varmaan **rytmipelin**, mutta saa nähdä mitä siitäkin *tule
 [komentorivi.txt](/laskarit/viikko1/komentorivi.txt)
 
 
-[manzai-rytmipeli](https://www.youtube.com/watch?v=xdcKicUYVek)
