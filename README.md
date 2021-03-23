@@ -8,4 +8,4 @@ Aattelin et teen varmaan [**rytmipelin**](https://www.youtube.com/watch?v=xdcKic
 
 [komentorivi.txt](/laskarit/viikko1/komentorivi.txt)
 
-moi
+![kuva: betazoid alien pelaa pingistä](/pingis.jpg)
