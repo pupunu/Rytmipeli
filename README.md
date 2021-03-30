@@ -13,7 +13,7 @@ Aattelin et teen varmaan [**rytmipelin**](https://www.youtube.com/watch?v=xdcKic
 
 [unicafe](/laskarit/viikko2/unicafe)
 
-
+![testikattavuusraportti](/laskarit/viikko2/kattavuusraportti.png)
 
 ## Harjoitustyö
 
