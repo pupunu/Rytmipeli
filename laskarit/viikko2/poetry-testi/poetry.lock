@@ -1,0 +1,18 @@
+[[package]]
+name = "cowsay"
+version = "3.0"
+description = "The famous cowsay for GNU/Linux is now available for python"
+category = "main"
+optional = false
+python-versions = "*"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.6"
+content-hash = "573c6c9b6f16c42a9f3c438601c33b6b2d05caa2eb309101aedc62ddca069559"
+
+[metadata.files]
+cowsay = [
+    {file = "cowsay-3.0-py2.py3-none-any.whl", hash = "sha256:d60b691f4a62823f329936bb4dce27f8af859d72a4de7b69da25fe68d86ac107"},
+    {file = "cowsay-3.0.tar.gz", hash = "sha256:f165c6924bf786e15d41f90ce932170c65e49d6c58ad4802db001397ed971117"},
+]
