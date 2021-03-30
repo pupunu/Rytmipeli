@@ -2,7 +2,7 @@
 
 ## Sovelluksen tarkoitus
 
-Sovellus on rytmipeli. Siinä pitää klikkailla annettuja nappeja oikean rytmin tahtiin.
+Sovellus on rytmipeli. Siinä pitää painella oikeita nappeja oikean rytmin tahtiin. Sovellus on ns. arcadetyylinen rytmipeli, eli käyttäjien ainoa indentifikaattori on väliaikaseisti valittu pelaajanimi, jolla tulokset tallentuvat top 10 -listaan.
 
 
 ## Käyttäjät
@@ -15,9 +15,10 @@ Sovelluksessa on yksi käyttäjätyyppi eli *pelaaja*.
 Sovelluksessa on neljä näkymää: kirjautumisnäkymä, kappaleen valintanäkymä, pelinäkymä ja tulosnäkymä.
 
 ![kuva käyttöliittymästä](kayttoliittyma.png)
+**Huom** itse rytmipelin konkreettiseen ulkonäköön voi tulla muutoksia
 
 ## Persuversion ominaisuudet
-- antaa käyttäjätunnus
+- valita pelaajanimi
 - valita biisi
 - pelata peliä
 - nähdä omat tulokset ja pisteet
