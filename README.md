@@ -13,6 +13,10 @@ Aattelin et teen varmaan [**rytmipelin**](https://www.youtube.com/watch?v=xdcKic
 
 [unicafe](/laskarit/viikko2/unicafe)
 
+
+
+## Harjoitustyö
+
 [vaatimusmäärittely](/dokumentaatio/vaatimusmaarittely.md)
 
 [tuntikirjanpito](/dokumentaatio/tuntikirjanpito.md)
