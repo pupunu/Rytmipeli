@@ -10,9 +10,11 @@ Aattelin et teen varmaan [**rytmipelin**](https://www.youtube.com/watch?v=xdcKic
 
 ### Viikko 2
 [maksukortti](/laskarit/viikko2/maksukortti)
+
 [unicafe](/laskarit/viikko2/unicafe)
 
 [vaatimusmäärittely](/dokumentaatio/vaatimusmaarittely.md)
+
 [tuntikirjanpito](/dokumentaatio/tuntikirjanpito.md)
 
 
