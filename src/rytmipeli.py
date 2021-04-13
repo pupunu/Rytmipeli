@@ -1,9 +1,11 @@
 from ui import *
 from song import *
+from catalog import *
+import os
 
 def main():
     game = Game()
-    game.load_songs('./../data/songs')
+    game.load_songs('src/../data/songs/')
     game.set_player_name()
     game.choose_song()
     
@@ -26,8 +28,8 @@ class Game:
         print('Valitsit nimen', self.player_name, '\n')
 
 
-    def load_songs(self, filename):
-        self.catalog.load_songs(filename)
+    def load_songs(self, dirname):
+        self.catalog.load_songs(dirname)
 
 
     def choose_song(self):
