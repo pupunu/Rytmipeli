@@ -21,7 +21,7 @@ poetry install
 poetry run invoke start
 ```
 
-## Ohjelmankäynnisty
+## Ohjelman käynnistys
 Käynnistä ohjelma komennolla
 ```bash
 poetry run invoke start
