@@ -2,12 +2,14 @@ from ui import *
 from song import *
 from catalog import *
 import os
+import pygame
 
 def main():
     game = Game()
     game.load_songs('src/../data/songs/')
     game.set_player_name()
-    game.choose_song()
+    game.ui.set_text('Valitsit biisin ' + game.choose_song())
+    game.ui.main_loop()
     
 
 
@@ -16,6 +18,7 @@ class Game:
         self.catalog = Catalog()
         self.player_name = None
         self.song_playing = None
+        self.ui = UI()
     
 
     def set_player_name(self):
@@ -25,8 +28,6 @@ class Game:
             self.player_name = 'Vierailija'
         else:
             self.player_name = name
-        print('Valitsit nimen', self.player_name, '\n')
-
 
     def load_songs(self, dirname):
         self.catalog.load_songs(dirname)
@@ -44,10 +45,11 @@ class Game:
             songname = input()
             if songname in self.catalog.songlist:
                 self.song_playing = self.catalog.songlist[songname]
-                print('Valitsit biisin:', songname,'\n')
                 break
             print('epäkelpo nimi\n')
 
+        
+        return songname
 
 
 

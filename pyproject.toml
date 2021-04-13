@@ -7,6 +7,7 @@ authors = ["pupunu <hunajakettu@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.6"
 invoke = "^1.5.0"
+pygame = "^2.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.3"
