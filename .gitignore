@@ -10,5 +10,5 @@ __pycache__
 .coverage
 htmlcov
 .pytest_cache
-
+/src/__pycache__
 
