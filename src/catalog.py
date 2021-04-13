@@ -5,9 +5,6 @@ class Catalog:
     def __init__(self):
         self.songlist = {}
 
-    def does_song_exist(self, songname):
-        return songname in self.songlist
-
 
     def load_songs(self, directorypath):
 
@@ -28,13 +25,5 @@ class Catalog:
 
                 self.songlist[songname] = song
 
-
-    def get_song(self, songname):
-        if songname in self.songlist:
-            return self.songlist[songname]
-        return False
-
     def list_songs(self):
-        for song in self.songlist:
-            print(song)
-        print()
+        return list(self.songlist.keys())

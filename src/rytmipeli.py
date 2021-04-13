@@ -34,11 +34,15 @@ class Game:
 
     def choose_song(self):
         print('Biisit:')
-        self.catalog.list_songs()
+        
+        for song in self.catalog.list_songs():
+            print(song)
+        print()
+
         while True:
             print('Valitse biisi')
             songname = input()
-            if self.catalog.does_song_exist(songname):
+            if songname in self.catalog.songlist:
                 self.song_playing = self.catalog.songlist[songname]
                 print('Valitsit biisin:', songname,'\n')
                 break

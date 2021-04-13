@@ -23,4 +23,4 @@ Aattelin et teen varmaan [**rytmipelin**](https://www.youtube.com/watch?v=xdcKic
 
 
 
-![kuva: betazoid alien pelaa pingistä](/pingis.jpg)
+![kuva: betazoid alien pelaa pingistä](/data/graphics/pingis.jpg)
