@@ -12,25 +12,25 @@ Sovellus on suunniteltu toimimaan python 3.6.0:lla. Vanhemmilla versioilla saatt
 
 ## Asennus
 1. Asenna riippuvuudet komennolla
-'''bash
+```bash
 poetry install
-'''
+```
 
 2. Käynnistä ohjelma komennolla
-'''bash
+```bash
 poetry run invoke start
-'''
+```
 
 ## Ohjelmankäynnisty
 Käynnistä ohjelma komennolla
-'''bash
+```bash
 poetry run invoke start
-'''
+```
 
 ## Ohjelman testaus
 Suorita testit komennolla
-'''bash
+```bash
 poetry run invoke test
-'''
+```
 
 ![kuva: betazoid alien pelaa pingistä](/data/graphics/pingis.jpg)
