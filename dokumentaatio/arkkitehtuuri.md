@@ -2,4 +2,4 @@
 
 ## Ohjelman toiminnallinen rakenne
 
-![pakkauskaavio](/pakkauskaavio.png)
+![pakkauskaavio](pakkauskaavio.png)
