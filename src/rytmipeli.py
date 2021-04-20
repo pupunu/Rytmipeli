@@ -1,5 +1,5 @@
 from song import load_songs
-import game
+from game import run as game_run
 from ui import *
 
 def main():
@@ -8,7 +8,7 @@ def main():
 
     while True:
         current_song = choose_song(songlist)
-        game.run(current_song, playername)
+        game_run(current_song, playername)
 
 if __name__ == '__main__':
     main()
