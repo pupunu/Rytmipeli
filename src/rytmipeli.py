@@ -59,7 +59,7 @@ def load_songs(directorypath):
                     elif key == 'speed':
                         speed = int(value)
                         if speed <= 0:
-                            raise negative_speed("Tiedoston " + filename + " nopeus on negatiivinen.")
+                            raise NegativeSpeed("Tiedoston " + filename + " nopeus on negatiivinen.")
                     elif key == 'offset':
                         offset = float(value)
                     elif key == 'steps':
