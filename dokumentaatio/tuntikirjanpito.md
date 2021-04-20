@@ -6,3 +6,4 @@
 |16.4.|3|Pelin kirjastojen pohtimista ja testailua.|
 |19.4.|6|Pelin perustoiminnallisuuksien toteutus|
 |20.4.|6|Ohjelman rakenteen siistimistä.|
+|yhteensä|25|---|
