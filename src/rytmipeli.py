@@ -4,7 +4,7 @@ import game
 
 
 def main():
-    songlist = load_songs('src/../data/songs/')
+    songlist = load_songs('data/songs/')
     playername = get_player_name()
     current_song = choose_song(songlist)
     game.main(current_song)
@@ -50,22 +50,23 @@ def load_songs(directorypath):
 
                     line_content = line.split(':')
                     key = line_content[0]
-                    value = line_content[1]
+                    value = line_content[1].strip()
 
                     if key == 'name':
-                        songname = value.strip()
+                        songname = value
                     elif key == 'audiofile':
-                        audiofile = value.strip()
+                        audiofile = value
                     elif key == 'speed':
-                        speed = int(value.strip())
+                        speed = int(value)
                         if speed <= 0:
                             raise negative_speed("Tiedoston " + filename + " nopeus on negatiivinen.")
-
+                    elif key == 'offset':
+                        offset = float(value)
                     elif key == 'steps':
                         break
 
 
-            song = Song(songname, filename, directorypath + audiofile, speed)
+            song = Song(songname, filename, directorypath + audiofile, speed, offset)
 
             songlist[songname] = song
     

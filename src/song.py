@@ -1,12 +1,13 @@
 
 class Song:
-    def __init__(self, name, filename, audiofile, speed):
+    def __init__(self, name, filename, audiofile, speed, offset):
         self.name = name
         self.filename = filename
         self.audiofile = audiofile
         self.steps = []
         self.speed = speed
         self.current_beat = -1
+        self.offset = offset
 
 
     def __str__(self):

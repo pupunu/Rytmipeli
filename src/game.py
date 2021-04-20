@@ -12,6 +12,7 @@ def main(song):
     win = window.Window(caption = 'rytmipeli')
 
     audio = media.load(song.audiofile)
+    feedback_label = text.Label('', x = 400, y = 200, anchor_x = 'center')
     
     colors = BLUE, RED, YELLOW, GREEN
     boxes = []
@@ -41,6 +42,7 @@ def main(song):
                 note.y -= 80*dt
                 if note.y < -50:
                     noterow.remove(note)
+                    feedback_label.text = 'Oot huono'
             
 
 
@@ -51,13 +53,28 @@ def main(song):
             box.draw()
         for note in reduce(lambda a, b : a+b, notes, []):
             note.draw()
+        feedback_label.draw()
 
     @win.event
     def on_key_press(symbol, modifiers):
         def note_hit(row_num):
             for note in notes[row_num]:
-                if abs(note.y - 50) < 10: #lisää ehtoja eri pisteille
+                dist = abs(note.y -50)
+                if dist < 50:
+
+                    if dist < 10: #lisää ehtoja eri pisteille
+                        feedback_label.text = 'Brutaali'
+                    elif dist < 20:
+                        feedback_label.text = 'Vaikea'
+                    elif dist < 30:
+                        feedback_label.text = 'Normaali'
+                    elif dist < 40:
+                        feedback_label.text = 'Helppo'
+                    else:
+                        feedback_label.text = 'Heikko'
+
                     notes[row_num].remove(note)
+
 
         if symbol == window.key.F:
             note_hit(0)
@@ -68,9 +85,13 @@ def main(song):
         if symbol == window.key.J:
             note_hit(3)
 
+    if song.offset > 0:
+        clock.schedule_once(lambda a: audio.play(), song.offset)
+        clock.schedule_interval(add_note, 60.0/song.speed)
+    else:
+        clock.schedule_once(lambda a: clock.schedule_interval(add_note, 60.0/song.speed), -song.offset)
+        audio.play()
 
 
     clock.schedule(drop_notes)
-    clock.schedule_interval(add_note, 60.0/song.speed)
-
     app.run()

@@ -1,4 +1,7 @@
 name:testi1
-file:testibiisi1.mp3
-steps
-
+audiofile:testibiisi1.wav
+speed:50
+offset:2.5
+steps:
+0001
+1000

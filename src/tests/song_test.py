@@ -1,15 +1,19 @@
 import unittest
 from song import Song
+from rytmipeli import load_songs
 
 class TestSong(unittest.TestCase):
     def setUp(self):
-        self.song = Song('karameldanssen', 'karameldanssen.txt', 'audio.mp3')
+        self.song = load_songs('src/tests/catalog_test_songs/')['testi1']
 
     def test_correct_name(self):
-        self.assertEqual(self.song.name, 'karameldanssen')
+        self.assertEqual(self.song.name, 'testi1')
 
     def test_correct_filename(self):
-        self.assertEqual(self.song.songfile, "karameldanssen.txt")
+        self.assertEqual(self.song.filename, "src/tests/catalog_test_songs/testibiisi.txt")
+
+    def test_correct_audiofile(self):
+        self.assertEqual(self.song.audiofile, "src/tests/catalog_test_songs/testibiisi1.wav")
 
     def test_str_returns_name(self):
-        self.assertEqual(str(self.song), self.song.name)
+        self.assertEqual('testi1', str(self.song))
