@@ -10,3 +10,6 @@ class TestSong(unittest.TestCase):
 
     def test_correct_filename(self):
         self.assertEqual(self.song.songfile, "karameldanssen.txt")
+
+    def test_str_returns_name(self):
+        self.assertEqual(str(self.song), self.song.name)

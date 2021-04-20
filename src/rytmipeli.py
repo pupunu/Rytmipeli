@@ -1,56 +1,75 @@
-from ui import *
 from song import *
-from catalog import *
 import os
-import pygame
+import game
+
 
 def main():
-    game = Game()
-    game.load_songs('src/../data/songs/')
-    game.set_player_name()
-    game.ui.set_text('Valitsit biisin ' + game.choose_song())
-    game.ui.main_loop()
+    songlist = load_songs('src/../data/songs/')
+    playername = get_player_name()
+    current_song = choose_song(songlist)
+    game.main(current_song)
+
+
+def get_player_name():
+    print('Anna nimesi')
+    name = input()
+    if name == '':
+        return 'Vierailija'
+    else:
+        return name
+
+def choose_song(songlist):
+    print('Biisit:')
     
+    for song in songlist:
+        print(song)
+    print()
+
+    while True:
+        print('Valitse biisi')
+        songname = input()
+        if songname in songlist:
+            songlist[songname].load_steps()
+            return songlist[songname]
+        print('epäkelpo nimi\n')
 
 
-class Game:
-    def __init__(self):
-        self.catalog = Catalog()
-        self.player_name = None
-        self.song_playing = None
-        self.ui = UI()
+def load_songs(directorypath):
+    songlist = {}
+
+    dircontent = os.listdir(directorypath)
+    for filename in dircontent:
+
+        if '.txt' in filename:
+
+            with open(directorypath + filename) as file:
+                
+                filename = file.name
+
+                for line in file:
+
+                    line_content = line.split(':')
+                    key = line_content[0]
+                    value = line_content[1]
+
+                    if key == 'name':
+                        songname = value.strip()
+                    elif key == 'audiofile':
+                        audiofile = value.strip()
+                    elif key == 'speed':
+                        speed = int(value.strip())
+                        if speed <= 0:
+                            raise negative_speed("Tiedoston " + filename + " nopeus on negatiivinen.")
+
+                    elif key == 'steps':
+                        break
+
+
+            song = Song(songname, filename, directorypath + audiofile, speed)
+
+            songlist[songname] = song
     
-
-    def set_player_name(self):
-        print('Anna nimesi')
-        name = input()
-        if name == '':
-            self.player_name = 'Vierailija'
-        else:
-            self.player_name = name
-
-    def load_songs(self, dirname):
-        self.catalog.load_songs(dirname)
-
-
-    def choose_song(self):
-        print('Biisit:')
-        
-        for song in self.catalog.list_songs():
-            print(song)
-        print()
-
-        while True:
-            print('Valitse biisi')
-            songname = input()
-            if songname in self.catalog.songlist:
-                self.song_playing = self.catalog.songlist[songname]
-                break
-            print('epäkelpo nimi\n')
-
-        
-        return songname
-
+    return songlist
 
 
 if __name__ == '__main__':

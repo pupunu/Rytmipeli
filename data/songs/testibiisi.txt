@@ -1,1 +1,8 @@
 name:testi1
+audiofile:testibiisi1.mp3
+speed:50
+steps:
+1000
+0100
+0010
+0001
