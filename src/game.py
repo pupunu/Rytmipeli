@@ -10,7 +10,7 @@ GREEN = 0, 255, 0
 YELLOW = 255, 255, 0
 
 
-def main(song):
+def run(song, _):
     win = window.Window(caption = 'rytmipeli')
 
     colors = BLUE, RED, YELLOW, GREEN
