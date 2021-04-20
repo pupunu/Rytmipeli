@@ -34,7 +34,7 @@ Suorita testit komennolla
 ```bash
 poetry run invoke test
 ```
-### Testikattavuusraportti
+## Testikattavuusraportti
 1. Testikattavuusraportin saa suorittamalla komennon
 ```bash
 poetry run invoke coverage-report
@@ -43,6 +43,11 @@ poetry run invoke coverage-report
 2. Testikattavuusraportin saa suoraan suoritettua ja näkyviin firefoxissa (jos asennettu) auki komennolla
 ```bash
 poetry run invoke see-coverage-report
+```
+## Pylint
+Suorita koodin laatutarkastus komennolla
+```bash
+poetry run invoke lint
 ```
 
 ![kuva: betazoid alien pelaa pingistä](/data/graphics/pingis.jpg)

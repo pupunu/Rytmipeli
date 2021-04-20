@@ -19,3 +19,7 @@ def coverage_report(ctx):
 @task(coverage_report)
 def see_coverage_report(ctx):
     ctx.run('firefox htmlcov/index.html')
+
+@task
+def lint(ctx):
+    ctx.run('pylint src')
