@@ -7,4 +7,5 @@
 |19.4.|6|Pelin perustoiminnallisuuksien toteutus|
 |20.4.|6|Ohjelman rakenteen siistimistä.|
 |26.4.|4|Graafisen ulkoasun parantamista ja pisteiden toteutus.|
-|yhteensä|25|---|
+|27.4.|8|Grafiikan fiksausta ja pakkausrakenteen selkeyttämistä. Dokumentaation päivitystä. Testien päivitys.|
+|yhteensä|37|---|
