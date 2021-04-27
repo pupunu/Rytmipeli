@@ -61,7 +61,7 @@ class GameWindow(window.Window):
 
     def add_note_to_row(self, notes, i):
         x = 50 + i*100
-        note = sprite.Sprite(self.notes_images[i], x=x, y=400)
+        note = sprite.Sprite(self.notes_images[i], x=x, y=480+self.notes_images[i].height)
         note.anchor_x = 'center'
         note.anchor_y = 'center'
         notes[i].append(note)

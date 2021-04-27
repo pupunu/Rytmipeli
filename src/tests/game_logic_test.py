@@ -34,13 +34,13 @@ class TestGameLogic(unittest.TestCase):
     def test_check_floor_hit_True(self):
         noteF_img = image.load('data/graphics/sammakko.png')
         note = sprite.Sprite(noteF_img, x=100, y=-100)
-        note.anchor_y='center'
+        note.anchor_y = 'center'
 
         self.assertEqual(game_logic.check_floor_hit(note), (True, 'Oot huono'))
 
     def test_check_floor_hit_True(self):
         noteF_img = image.load('data/graphics/sammakko.png')
         note = sprite.Sprite(noteF_img, x=100, y=100)
-        note.anchor_y='center'
+        note.anchor_y = 'center'
 
-        self.assertEqual(game_logic.check_floor_hit(note), (False,''))
+        self.assertEqual(game_logic.check_floor_hit(note), (False, ''))
