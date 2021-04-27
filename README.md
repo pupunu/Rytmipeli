@@ -13,7 +13,7 @@ Sovellus on suunniteltu toimimaan python 3.6.0:lla. Vanhemmilla versioilla saatt
 [tuntikirjanpito](/dokumentaatio/tuntikirjanpito.md)
 
 ## Uusin julkaisu
-[Uusin julkaisu](/releases/tag/viikko5) löytyy täältä.
+[Uusin julkaisu](https://github.com/pupunu/ot-harjoitutyo/releases/tag/viikko5) löytyy täältä.
 
 ## Asennus
 1. Asenna riippuvuudet komennolla
