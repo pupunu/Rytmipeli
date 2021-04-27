@@ -18,10 +18,10 @@ Sovelluksessa on neljä näkymää: kirjautumisnäkymä, kappaleen valintanäkym
 **Huom** itse rytmipelin konkreettiseen ulkonäköön voi tulla muutoksia
 
 ## Persuversion ominaisuudet
-- valita pelaajanimi
-- valita biisi
-- pelata peliä
-- nähdä omat tulokset ja pisteet
+- valita pelaajanimi (tehty tekstipohjaisesti)
+- valita biisi (tehty te-kstipohjaisesti)
+- pelata peliä (pääosin tehty)
+- nähdä omat tulokset ja pisteet (tehty tekstipohjaisesti)
 - nähdä muiden 10 parasta pistemäärää
 
 ### Avatessa peli
