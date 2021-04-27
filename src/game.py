@@ -2,8 +2,9 @@ from pyglet import media, window, shapes, clock, text, app, sprite, image
 from game_logic import check_floor_hit, check_for_hits, give_points
 from game_window import *
 
+
 def run(song, player_name):
-    win = GameWindow(caption='rytmipeli', player_name = player_name)
+    win = GameWindow(caption='rytmipeli', player_name=player_name)
 
     # biisin alustus
     song.current_beat = -1

@@ -10,29 +10,31 @@ SCORE_FEEDBACK = {'brutal': 'Brutaali',
                   'easy': 'Helppo',
                   'weak': 'Heikko'}
 
+
 class GameWindow(window.Window):
 
     def __init__(self, caption, player_name):
         super(GameWindow, self).__init__(caption=caption)
 
-        #luodaan tekstikentät
+        # luodaan tekstikentät
         self.feedback_label = text.Label(
             '', x=510, y=305, anchor_x='center', color=BLACK)
-        self.player_name_label = text.Label(player_name, x=480, y=150, color=BLACK)
+        self.player_name_label = text.Label(
+            player_name, x=480, y=150, color=BLACK)
         self.points_label = text.Label('0', x=480, y=120, color=BLACK)
 
-        #luodaan nuottien kuvat
+        # luodaan nuottien kuvat
         noteF_img = image.load('data/graphics/sammakko.png')
         noteG_img = image.load('data/graphics/sammakkoG.png')
         noteH_img = image.load('data/graphics/sammakkoH.png')
         noteJ_img = image.load('data/graphics/sammakkoJ.png')
         self.notes_images = noteF_img, noteG_img, noteH_img, noteJ_img
 
-        #luodaan taustakuva
+        # luodaan taustakuva
         bkgr_img = image.load('data/graphics/tausta.png')
         self.background = sprite.Sprite(bkgr_img, x=0, y=0)
 
-        #luodaan maalitaulut
+        # luodaan maalitaulut
         self.target_circles = []
 
         targetF_img = image.load('data/graphics/maaliF.png')
@@ -63,7 +65,6 @@ class GameWindow(window.Window):
         note.anchor_x = 'center'
         note.anchor_y = 'center'
         notes[i].append(note)
-
 
     def draw_all(self, notes):
         self.background.draw()
