@@ -1,34 +1,50 @@
 BOX_Y = 50
 
+
 def check_for_hits(row):
     for note in row:
         dist = is_hit(note.y)
         if dist:
             row.remove(note)
-            return score(dist)
+            return get_score(dist)
+
 
 def is_hit(y):
     dist = abs(y - BOX_Y)
     if dist < 50:
         return dist
-    else:
-        return False
+    return False
 
-def score(dist):
+
+def get_score(dist):
     if dist < 10:
-        return 'Brutaali'
+        return 'brutal'
     elif dist < 20:
-        return 'Vaikea'
+        return 'hard'
     elif dist < 30:
-        return 'Normaali'
+        return 'normal'
     elif dist < 40:
-        return 'Helppo'
-    else:
-        return 'Heikko'
+        return 'easy'
+    return 'weak'
+
 
 def check_floor_hit(note):
     if note.y < -note.height:
         return True, 'Oot huono'
-    else:
-        return False, ''
+    return False, ''
 
+
+def give_points(points_dict, score):
+    points_dict[score] += 1
+    points = 0
+    if score == 'brutal':
+        points = 100
+    elif score == 'hard':
+        points = 50
+    elif score == 'normal':
+        points = 25
+    elif score == 'easy':
+        points = 10
+    elif score == 'weak':
+        points = 1
+    points_dict['total'] += points

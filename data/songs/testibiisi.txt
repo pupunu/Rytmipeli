@@ -1,8 +1,24 @@
-name:testi1
+name:luvattu maailma
 audiofile:testibiisi1.wav
 speed:50
 offset:2.5
 steps:
+1000
+1000
+1000
+1000
+1000
+1000
+1100
+1100
+1100
+1100
+1100
+1110
+1110
+1110
+1110
+1110
 1000
 0100
 0010

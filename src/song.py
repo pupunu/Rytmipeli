@@ -1,5 +1,6 @@
 from os import listdir
 
+
 class Song:
     def __init__(self, name, filename, audiofile, speed, offset):
         self.name = name
@@ -9,7 +10,6 @@ class Song:
         self.speed = speed
         self.current_beat = -1
         self.offset = offset
-
 
     def __str__(self):
         return self.name
@@ -28,13 +28,14 @@ class Song:
 
                 elif line == 'steps:':
                     steps_have_started = True
-    
+
     def get_next_beat(self):
         self.current_beat += 1
         if self.current_beat < len(self.steps):
             return self.steps[self.current_beat]
         else:
             return False
+
 
 def load_songs(directorypath):
     songlist = {}
@@ -45,7 +46,7 @@ def load_songs(directorypath):
         if '.txt' in filename:
 
             with open(directorypath + filename) as file:
-                
+
                 filename = file.name
 
                 for line in file:
@@ -61,15 +62,16 @@ def load_songs(directorypath):
                     elif key == 'speed':
                         speed = int(value)
                         if speed <= 0:
-                            raise NegativeSpeed("Tiedoston " + filename + " nopeus on negatiivinen.")
+                            raise NegativeSpeed(
+                                "Tiedoston " + filename + " nopeus on negatiivinen.")
                     elif key == 'offset':
                         offset = float(value)
                     elif key == 'steps':
                         break
 
-
-            song = Song(songname, filename, directorypath + audiofile, speed, offset)
+            song = Song(songname, filename, directorypath +
+                        audiofile, speed, offset)
 
             songlist[songname] = song
-    
+
     return songlist

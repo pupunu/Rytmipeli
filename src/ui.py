@@ -1,7 +1,7 @@
-#class UI:
+# class UI:
 
-# tänne toteutetaan visuaalinen 
-# käyttöliittymä nimen kysymiselle, 
+# tänne toteutetaan visuaalinen
+# käyttöliittymä nimen kysymiselle,
 # biisin valinnalle ja tulosten näyttämiselle
 
 def get_player_name():
@@ -12,9 +12,10 @@ def get_player_name():
     else:
         return name
 
+
 def choose_song(songlist):
     print('Biisit:')
-    
+
     for song in songlist:
         print(song)
     print()
@@ -23,6 +24,16 @@ def choose_song(songlist):
         print('Valitse biisi')
         songname = input()
         if songname in songlist:
-            songlist[songname].load_steps()
             return songlist[songname]
         print('epäkelpo nimi\n')
+
+
+def print_results(points, player, song):
+    print('\n\nPisteet')
+    print('Biisi:', song, '--- Pelaaja:', player)
+    print('\nBrutaaleja:', points['brutal'])
+    print('Vaikeita:', points['hard'])
+    print('Normaaleja:', points['normal'])
+    print('Helppoja:', points['easy'])
+    print('Heikkoja:', points['weak'])
+    print('\nYhteensä pisteitä:', points['total'], '\n\n')

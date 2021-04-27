@@ -1,6 +1,7 @@
 import unittest
 import rytmipeli
 
+
 class TestRytmipeli(unittest.TestCase):
     def setUp(self):
         pass

@@ -1,6 +1,7 @@
 import unittest
 import game_logic
 
+
 class TestGameLogic(unittest.TestCase):
 
     def test_gives_right_score_weak(self):
