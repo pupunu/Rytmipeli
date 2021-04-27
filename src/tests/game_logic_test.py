@@ -1,5 +1,6 @@
 import unittest
 import game_logic
+from pyglet import sprite, shapes, image
 
 
 class TestGameLogic(unittest.TestCase):
@@ -29,3 +30,17 @@ class TestGameLogic(unittest.TestCase):
 
     def test_hit_false_if_no_collision(self):
         self.assertEqual(game_logic.is_hit(120), False)
+
+    def test_check_floor_hit_True(self):
+        noteF_img = image.load('data/graphics/sammakko.png')
+        note = sprite.Sprite(noteF_img, x=100, y=-100)
+        note.anchor_y='center'
+
+        self.assertEqual(game_logic.check_floor_hit(note), (True, 'Oot huono'))
+
+    def test_check_floor_hit_True(self):
+        noteF_img = image.load('data/graphics/sammakko.png')
+        note = sprite.Sprite(noteF_img, x=100, y=100)
+        note.anchor_y='center'
+
+        self.assertEqual(game_logic.check_floor_hit(note), (False,''))

@@ -1,4 +1,4 @@
-from pyglet import media, window, shapes, clock, text, app, sprite, image
+from pyglet import media, window, clock, text, app, sprite, image
 from game_logic import check_floor_hit, check_for_hits, give_points
 from game_window import *
 
