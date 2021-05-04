@@ -28,3 +28,7 @@ class TestSong(unittest.TestCase):
         self.song.load_steps()
         beat = self.song.get_next_beat()
         self.assertEqual(beat, '0001')
+
+    def test_loading_songs_works(self):
+        songlist = load_songs('src/tests/catalog_test_songs/')
+        self.assertEqual(list(songlist), ['testi1'])

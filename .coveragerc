@@ -1,3 +1,3 @@
 [run]
 source = src
-omit = src/tests/**,src/ui.py,src/game_window.py,src/game.py
+omit = src/tests/**,src/ui.py,src/game_window.py,src/game.py, src/rytmipeli.py
