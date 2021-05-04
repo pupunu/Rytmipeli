@@ -1,20 +1,20 @@
 # Käyttöohje
 
-Projektin viimeisimmän julkaisun saa ladattua lähdekoodi.
+Projektin viimeisimmän version saa ladattua [uusimman julkaisun](https://github.com/pupunu/ot-harjoitutyo/releases/tag/viikko6) lähdekoodin.
 
 ## Miten pelin saa käyntiin
 
 Kun ohjelman koodi on ladattu, tulee asentaa riippuvuudet komennolla:
 
-'''bash
+```bash
 poetry install
-'''bash
+```
 
 Nyt ohjelman voi käynnistää komennolla
 
-'''bash
+```bash
 poetry run invoke start
-'''
+```
 
 ## Pelaajanimen antaminen
 
