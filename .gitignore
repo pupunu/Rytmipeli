@@ -11,4 +11,5 @@ __pycache__
 htmlcov
 .pytest_cache
 /src/__pycache__
-
+/src/tests/__pycache__
+/laskarit/viikko2/unicafe/htmlcov
