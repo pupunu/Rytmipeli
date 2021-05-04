@@ -59,6 +59,7 @@ def run(song, player_name):
                 if beat[i] == '1':
                     win.add_note_to_row(notes, i)
 
+
     if song.offset > 0:
         clock.schedule_once(lambda a: player.play(), song.offset)
         clock.schedule_interval(add_note, 60.0/song.speed)

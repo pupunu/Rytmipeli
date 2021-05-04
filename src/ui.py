@@ -37,3 +37,16 @@ def print_results(points, player, song):
     print('Helppoja:', points['easy'])
     print('Heikkoja:', points['weak'])
     print('\nYhteensä pisteitä:', points['total'], '\n\n')
+
+
+def print_records(records, i):
+    if i == 0:
+        print('Sait uuden ennätyksen!!!\n')
+    elif i > 0:
+        print('Pääsit kymmenen parhaimman listalle!\n')
+    
+    for i in range(len(records)):
+        current_record = records[i]
+        print(str(i+1) + '.   ' + current_record[0] + '   ' + str(current_record[1]))
+
+    print()
