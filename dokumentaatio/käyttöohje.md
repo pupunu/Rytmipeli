@@ -1,6 +1,6 @@
 # Käyttöohje
 
-Projektin viimeisimmän julkaisun saa ladattua lähdekoodi.
+Projektin viimeisimmän version saa ladattua [uusimman julkaisun](/releases/tag/viikko6) lähdekoodin.
 
 ## Miten pelin saa käyntiin
 
