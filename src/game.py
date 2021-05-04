@@ -1,6 +1,6 @@
-from pyglet import media, window, clock, text, app, sprite, image
+from pyglet import media, window, clock, app
 from game_logic import check_floor_hit, check_for_hits, give_points
-from game_window import *
+from game_window import GameWindow
 
 
 def run(song, player_name):

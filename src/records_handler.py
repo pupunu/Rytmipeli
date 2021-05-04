@@ -26,7 +26,7 @@ def get_song_record(song):
 
     if not os.path.isfile(path):
         make_new_record_file(song)
-        
+
     records = []
     with open(path) as file:
         #luetaan enkat tiedostosta
