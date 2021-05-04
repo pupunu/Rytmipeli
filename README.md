@@ -15,7 +15,7 @@ Sovellus on suunniteltu toimimaan python 3.6.0:lla. Vanhemmilla versioilla saatt
 [käyttöohje](/dokumentaatio/käyttöohje.md)
 
 ## Uusin julkaisu
-[Uusin julkaisu](https://github.com/pupunu/ot-harjoitutyo/releases/tag/viikko5) löytyy täältä.
+[Uusin julkaisu](https://github.com/pupunu/ot-harjoitutyo/releases/tag/viikko6) löytyy täältä.
 
 ## Asennus
 1. Asenna riippuvuudet komennolla
