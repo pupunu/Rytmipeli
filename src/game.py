@@ -16,6 +16,7 @@ def run(song, player_name):
     player.queue(audio)
     player.seek(0)
 
+    #nuotit tallennetaan tähän
     notes = [], [], [], []
 
     points = {'brutal': 0, 'hard': 0, 'normal': 0,
@@ -59,7 +60,7 @@ def run(song, player_name):
                 if beat[i] == '1':
                     win.add_note_to_row(notes, i)
 
-
+    #jotta biisi alkaisi oikeaan aikaa, tässä säädetään offset
     if song.offset > 0:
         clock.schedule_once(lambda a: player.play(), song.offset)
         clock.schedule_interval(add_note, 60.0/song.speed)

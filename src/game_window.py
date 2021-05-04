@@ -12,8 +12,17 @@ SCORE_FEEDBACK = {'brutal': 'Brutaali',
 
 
 class GameWindow(window.Window):
+    '''Luokka, joka huolehtii pelin visuaalisista elementeistä
+    '''
 
     def __init__(self, caption, player_name):
+        ''' Luokan konstruktori, joka luo uuden peli-ikkunan.
+
+        Args:
+            caption: ikkunan yläreunaan tuleva teksti
+            player_name: pelaajan nimi
+        '''
+
         super(GameWindow, self).__init__(caption=caption)
 
         # luodaan tekstikentät
@@ -57,9 +66,22 @@ class GameWindow(window.Window):
             target.anchor_x = 25
 
     def update_feedback(self, score):
+        '''Fuktio, joka muuttaa näytöllä näkyvää tekstiä, siitä minkä arvosanan on viime osumaltaan saanut.
+
+        Args:
+            score: uusin osuman arvosana
+        '''
+
         self.feedback_label.text = SCORE_FEEDBACK[score]
 
     def add_note_to_row(self, notes, i):
+        '''Nuottien listaan uuden nuotin
+
+        Args:
+            notes: lista nuoteista
+            i: minkä indeksin jonoon nuotti lisätään
+        '''
+
         x = 50 + i*100
         note = sprite.Sprite(self.notes_images[i], x=x, y=480+self.notes_images[i].height)
         note.anchor_x = 'center'
@@ -67,6 +89,12 @@ class GameWindow(window.Window):
         notes[i].append(note)
 
     def draw_all(self, notes):
+        '''Piirtää kaiken tarvittavan näytölle
+
+        Args:
+            notes: pelissä hetkellä olevat nuotit
+        '''
+
         self.background.draw()
 
         for target in self.target_circles:
