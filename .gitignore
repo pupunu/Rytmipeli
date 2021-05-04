@@ -13,3 +13,5 @@ htmlcov
 /src/__pycache__
 /src/tests/__pycache__
 /laskarit/viikko2/unicafe/htmlcov
+/laskarit/viikko2/maksukortti/htmlcov
+/laskarit/viikko2/maksukortti/.coverage
