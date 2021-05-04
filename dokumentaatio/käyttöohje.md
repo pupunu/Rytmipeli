@@ -1,6 +1,6 @@
 # Käyttöohje
 
-Projektin viimeisimmän version saa ladattua [uusimman julkaisun](/releases/tag/viikko6) lähdekoodin.
+Projektin viimeisimmän version saa ladattua [uusimman julkaisun](https://github.com/pupunu/ot-harjoitutyo/releases/tag/viikko6) lähdekoodin.
 
 ## Miten pelin saa käyntiin
 
