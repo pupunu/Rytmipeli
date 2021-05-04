@@ -6,15 +6,15 @@ Projektin viimeisimmän julkaisun saa ladattua lähdekoodi.
 
 Kun ohjelman koodi on ladattu, tulee asentaa riippuvuudet komennolla:
 
-'''bash
+```bash
 poetry install
-'''bash
+```
 
 Nyt ohjelman voi käynnistää komennolla
 
-'''bash
+```bash
 poetry run invoke start
-'''
+```
 
 ## Pelaajanimen antaminen
 
