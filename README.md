@@ -12,6 +12,8 @@ Sovellus on suunniteltu toimimaan python 3.6.0:lla. Vanhemmilla versioilla saatt
 
 [tuntikirjanpito](/dokumentaatio/tuntikirjanpito.md)
 
+[käyttöohje](/dokumentaatio/käyttöohje.md)
+
 ## Uusin julkaisu
 [Uusin julkaisu](https://github.com/pupunu/ot-harjoitutyo/releases/tag/viikko5) löytyy täältä.
 
