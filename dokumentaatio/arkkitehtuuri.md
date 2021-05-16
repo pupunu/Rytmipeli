@@ -56,7 +56,7 @@ pelaajan nimi:saadut pisteet
 pelaajan nimi:saadut pisteet
 pelaajan nimi:saadut pisteet
  ```
- Ensimmäisellä rivillä oleva on aina saanut parhaat pisteet ja näin mitä alemmas menee rivejä, sitä vähemmän pisteitä on saanut.
+ Ensimmäisellä rivillä oleva on aina saanut parhaat pisteet ja näin mitä alemmas menee rivejä, sitä vähemmän pisteitä on saanut. Rivejä on aina kymmenen.
 
 ## Päätoiminnallisuudet ja sekvenssikaaviot
 ### Ohjelman perustoiminnallisuus
