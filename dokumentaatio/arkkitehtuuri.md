@@ -20,7 +20,27 @@ Alkutilasta, kappaleen valitsemisesta ja tulosten katselusta vastaa rytmipeli ui
 
 ## Sovelluslogiikka
 
-Pelin peruspalana toimivat Song-oliot, joihin on tallennettu biisien nuotit ja tiedost musiikista. Pelin ollessa käynnissä pelattavasta biisistä otetaan rivi kerrallaan seuraavat nuotit ja asetellaan ne pelikentälle, jossa ne vähitellen tippuvat alaspäin.
+Sovelluksessa pelin keskiössä ovat Song-oliot, joihin on tallennettu kappaleen musiikin tiedot ja pelin nuotit. Näiden valitsemisesta vastaa rytmipeli ja ui, ja pelissä käsittelyssä niistä vastaa game. Game pitää huolen siitä, että nuotit lisätään pelialueelle oikein ja tippuvat kentän ylälaidasta alalaitaan. Sekä pitää kirjaa pelin aikana pisteistä.
+
+## Tiedostot
+
+Pelissä on valmiiksi kaksi kappaletta ja niitä voi tehdä lisää käyttöohjeen avulla. Nämä tiedostot löytyvät ohjelman data-hakemistosta. Lisäksi data-hakemistosta löytyvät pelin ennätykset. Pelin aloittaessa ensimmäistä kertaa luodaan ennätyksiä varten oma kansionsa, jos sellainen puuttuu. Ennätykset ja biisien tiedot on tallennettu tavallisina tekstitiedostoina.
+
+ Biisit on tallennettu muodossa:
+ 
+ ```bash
+name:biisin nimi
+audiofile:biisin .wav-muodossa olevan musiikkitiedoston nimi
+speed:biisin nopeus bpm-muodossa
+offset:biisin offset, eli alkaako biisi heti musiikkitiedoston alusta vai pitääkö alkua hidastaa/aikaistaa 
+steps:
+0010
+1101
+.
+.
+.
+ ```
+Rivin steps: jälkeen alkavat siis nuotit, joissa yksi rivi vastaa yhtä iskua ja merkit rivillä vasemmalta oikealle pelin nuottirivejä f, g, h ja j. 1 tarkoittaa, että iskussa on kyseisellä rivillä nuotti ja 0 tarkoittaa, että iskussa ei ole kyseisellä rivillä nuottia.
 
 ## Päätoiminnallisuudet ja sekvenssikaaviot
 #### Ohjelman perustoiminnallisuus
