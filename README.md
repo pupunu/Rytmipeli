@@ -19,7 +19,7 @@ Sovellus on suunniteltu toimimaan python 3.6.0:lla. Vanhemmilla versioilla saatt
 [testausdokumentaatio](/dokumentaatio/testaus.md)
 
 ## Uusin julkaisu
-[Uusin julkaisu](https://github.com/pupunu/ot-harjoitutyo/releases/tag/viikko6) löytyy täältä.
+[Uusin julkaisu](https://github.com/pupunu/Rytmipeli/releases/tag/tekstik%C3%A4ytt%C3%B6liittym%C3%A4) löytyy täältä.
 
 ## Asennus
 1. Asenna riippuvuudet komennolla
