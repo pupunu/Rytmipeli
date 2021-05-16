@@ -16,6 +16,8 @@ Sovellus on suunniteltu toimimaan python 3.6.0:lla. Vanhemmilla versioilla saatt
 
 [käyttöohje](/dokumentaatio/käyttöohje.md)
 
+[testausdokumentaatio](/dokumentaatio/testaus.md)
+
 ## Uusin julkaisu
 [Uusin julkaisu](https://github.com/pupunu/ot-harjoitutyo/releases/tag/viikko6) löytyy täältä.
 
