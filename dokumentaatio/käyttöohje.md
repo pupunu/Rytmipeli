@@ -87,7 +87,7 @@ steps:
 1001
 ```
 
-## Mikä on offset ja miten käyttää sitä
+# Mikä on offset ja miten käyttää sitä
 
 Offset on kappaleen ajoituksen hienosäätöä varten. Äänitiedostot harvoin alkavat täydellisesti pelin kannalta niin, että ensimmäine rivi osuu ensimmäiselle iskulle. Tätä varten kappaleelle annetaan offset.
 
