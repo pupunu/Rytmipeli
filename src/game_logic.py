@@ -2,7 +2,9 @@ BOX_Y = 50
 
 
 def check_for_hits(row):
-    ''' Funktio jonka avulla tarkistetaan onko nuotteja osumaetäisyydellä ja jos on, niin kuinka tarkka osuma on kyseessä
+    ''' Funktio jonka avulla tarkistetaan onko nuotteja
+        osumaetäisyydellä ja jos on, niin kuinka tarkka
+        osuma on kyseessä
 
     Args:
         row: lista, jonka alkiot ovat nuottiolioita.
@@ -22,7 +24,7 @@ def check_for_hits(row):
             return get_score(dist)
 
 
-def is_hit(y):
+def is_hit(height):
     ''' Funktio tarkistaa onko osuma tapahtunut nuotin y-koordinaatin perusteella
 
     Args:
@@ -33,7 +35,7 @@ def is_hit(y):
         False, jos etäisyys on 50 tai yli.
     '''
 
-    dist = abs(y - BOX_Y)
+    dist = abs(height - BOX_Y)
     if dist < 50:
         return dist
     return False
@@ -41,7 +43,7 @@ def is_hit(y):
 
 def get_score(dist):
     '''Funktio määrittää mikä arvosana osumasta on saatu:
-    
+
     Args:
         dist: nuotin etäisyys optimaaliseen osumakohtaan
 
@@ -66,12 +68,13 @@ def get_score(dist):
 
 def check_floor_hit(note):
     '''Funktio tarkistaa onko nuotti poistunut tippunut alas asti (peliruudulta pois)
-    
+
     Args:
         note: nuotti, jonka poistumista tarkistellaan
 
     Returns:
-        True ja 'oot huono', jos nuotti on mennyt kokonaan pelaajalta ohi ja siirtynyt pois pelikentältä.
+        True ja 'oot huono', jos nuotti on mennyt kokonaan
+            pelaajalta ohi ja siirtynyt pois pelikentältä.
         False ja '' jos yksikään nuotti on edelleen pelikentällä
     '''
 

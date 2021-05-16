@@ -2,14 +2,17 @@ from os import listdir
 
 
 class Song:
-    '''Luokka, jonka avulla biisien tiedostonimet, nimet, askeleet ja musiikkitiedostot löytyvät ohjelmalle helposti
+    '''Luokka, jonka avulla biisien tiedostonimet, nimet,
+        askeleet ja musiikkitiedostot löytyvät ohjelmalle helposti
 
     Attributes:
         name: biisin nimi
-        filename: biisin tiedot sisältävän tiedoston tiedostonimi
+        filename: biisin tiedot sisältävän tiedoston 
+            tiedostonimi
         audiofile: biisin musiikkitiedoston tiedostonimi
         speed: biisin nopeus muodossa iskua minuttissa
-        offset: kuinka paljon askelten/musiikin tulee odottaa, että askeleet alkavat musiikin kannalta oikeassa kohtaa
+        offset: kuinka paljon askelten/musiikin tulee odottaa,
+            että askeleet alkavat musiikin kannalta oikeassa kohtaa
     '''
 
     def __init__(self, name, filename, audiofile, speed, offset):
@@ -42,8 +45,8 @@ class Song:
                     steps_have_started = True
 
     def get_next_beat(self):
-        '''Tällä metodilla pelin pyöriessä saa aina seuraavan tahdin nuotit.
-        
+        '''Tällä metodilla pelin pyöriessä saa aina seuraavan tahdin nuotit.       
+
         Returns:
             tahdin nuotit, jos askeleita nuotteja vielä riittää
             False, jos nuotit ovat loppuneet (eli biisi on loppu) 
@@ -51,8 +54,7 @@ class Song:
         self.current_beat += 1
         if self.current_beat < len(self.steps):
             return self.steps[self.current_beat]
-        else:
-            return False
+        return False
 
 
 def load_songs(directorypath):
@@ -60,7 +62,7 @@ def load_songs(directorypath):
 
     Args:
         directorypath: polku mistä biisit löytyvät
-    
+
     Returns:
         songlist: dictionary, jossa {kappaleen nimi: kappaletta vastaava song-olio}
     '''

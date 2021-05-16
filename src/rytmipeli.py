@@ -1,6 +1,6 @@
 from song import load_songs
 from game import run as game_run
-from ui import *
+from ui import get_player_name, choose_song, print_results, print_records
 from records_handler import chech_if_records_dir_exist, update_records
 
 

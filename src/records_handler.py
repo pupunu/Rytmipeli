@@ -1,7 +1,8 @@
 import os
 
 def chech_if_records_dir_exist():
-    '''Funktio joka tarkistaa onko ennätyshakemisto oikeassa paikassa ja luo sellaisen sen puuttuessa
+    '''Funktio joka tarkistaa onko ennätyshakemisto oikeassa
+        paikassa ja luo sellaisen sen puuttuessa
     '''
     if not os.path.isdir("data/records"):
         os.mkdir("data/records")
@@ -52,18 +53,17 @@ def get_song_record(song):
 
 def set_song_record(song, new_records):
     '''Funktio, jolla uudet ennätykset kirjataan tiedostoon
-    
+
     Args:
         song: kappale jolle ennätys lisätään
-        new_records: uudet ennätykset, jotka tiedostoon kirjataan
+        new_records: uudet ennätykset, jotka tiedostoon
+        kirjataan
     '''
     path = 'data/records/' + song.name + '.txt'
 
     file = open(path, 'w')
     for record in new_records:
-
         file.write(record[0] + ':' + str(record[1]) + '\n')
-    
     file.close()
 
 
@@ -77,7 +77,8 @@ def update_records(song, playername, points):
 
     Returns:
         new_records: lista, jossa top 10 pisteet tupleina (pelaajanimi, kokonaispistemäärä)
-        new_result_i: monennesko uusi tulos on ollut top 10 listalla. jos tulos ei ole päässyt listalle, tämä on -1
+        new_result_i: monennesko uusi tulos on ollut top 10
+            listalla. jos tulos ei ole päässyt listalle, tämä on -1
     '''
     old_records = get_song_record(song)
 

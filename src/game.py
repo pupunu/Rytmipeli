@@ -6,12 +6,15 @@ from game_window import GameWindow
 def run(song, player_name):
     '''Funktio, joka laittaa itse pelitilan käyntiin
 
+
     Args:
         song: song-olio jota aletaan pelata
         player_name: pelaajan nimi
 
     Returns:
-        points: dictionary jossa listattu montako kertaa on saanut tietyn osuman arvosanan ja yhteispistemäärä
+        points: dictionary jossa listattu montako
+        kertaa on saanut tietyn osuman arvosanan ja
+        yhteispistemäärä
     '''
 
     notes = [], [], [], []
@@ -34,7 +37,7 @@ def run(song, player_name):
 
     def drop_notes(dt):
         '''Funktio joka tiputtaa pelikentällä olevia nuotteja vähitellen alaspäin
-        
+
         Args:
             dt: deltatime
         '''
@@ -61,7 +64,7 @@ def run(song, player_name):
     @win.event
     def on_key_press(symbol, modifiers):
         '''Funktio joka tarvkistaa näppäinpainallukset
-        
+
         Args:
             symbol: painettu näppäin
             modifiers: onko ctrl, shift tai alt ollut pohjassa
