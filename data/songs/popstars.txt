@@ -1,7 +1,7 @@
 name:pop stars
 audiofile:popstars.wav
 speed:170
-offset:-2.3
+offset:-2.0
 steps:
 1111
 0000
