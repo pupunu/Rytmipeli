@@ -9,4 +9,5 @@
 |26.4.|4|Graafisen ulkoasun parantamista ja pisteiden toteutus.|
 |27.4.|8|Grafiikan fiksausta ja pakkausrakenteen selkeyttämistä. Dokumentaation päivitystä. Testien päivitys.|
 |4.5.|6|Pelitulosten tallentuminen ja vanhojen tulosten katselu. Testien päivitystä.|
-|yhteensä|43|---|
+|13.5.|3|Pelin koodia siistitty ja pelin lopettaminen ilman keskeytystä koodattu.|
+|yhteensä|46|---|
