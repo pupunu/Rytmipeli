@@ -26,7 +26,7 @@ Sovelluksessa pelin keskiössä ovat Song-oliot, joihin on tallennettu kappaleen
 
 Pelissä on valmiiksi kaksi kappaletta ja niitä voi tehdä lisää käyttöohjeen avulla. Nämä tiedostot löytyvät ohjelman data-hakemistosta. Lisäksi data-hakemistosta löytyvät pelin ennätykset. Pelin aloittaessa ensimmäistä kertaa luodaan ennätyksiä varten oma kansionsa, jos sellainen puuttuu. Ennätykset ja biisien tiedot on tallennettu tavallisina tekstitiedostoina.
 
- Biisit on tallennettu muodossa:
+### Biisien tallennusformaatti
  
  ```bash
 name:biisin nimi
@@ -42,20 +42,36 @@ steps:
  ```
 Rivin steps: jälkeen alkavat siis nuotit, joissa yksi rivi vastaa yhtä iskua ja merkit rivillä vasemmalta oikealle pelin nuottirivejä f, g, h ja j. 1 tarkoittaa, että iskussa on kyseisellä rivillä nuotti ja 0 tarkoittaa, että iskussa ei ole kyseisellä rivillä nuottia.
 
+### Tulosten tallennusformaatti
+
+ ```bash
+pelaajan nimi:saadut pisteet
+pelaajan nimi:saadut pisteet
+pelaajan nimi:saadut pisteet
+pelaajan nimi:saadut pisteet
+pelaajan nimi:saadut pisteet
+pelaajan nimi:saadut pisteet
+pelaajan nimi:saadut pisteet
+pelaajan nimi:saadut pisteet
+pelaajan nimi:saadut pisteet
+pelaajan nimi:saadut pisteet
+ ```
+ Ensimmäisellä rivillä oleva on aina saanut parhaat pisteet ja näin mitä alemmas menee rivejä, sitä vähemmän pisteitä on saanut.
+
 ## Päätoiminnallisuudet ja sekvenssikaaviot
-#### Ohjelman perustoiminnallisuus
+### Ohjelman perustoiminnallisuus
 
 Kun peli lähtee käyntiin tapahtuu seuraavasti:
 
 ![main-sekvenssikaavio](kuvat/pelinmain.png)
 
-#### Mitä tapahtuu, kun pelaaja painaa nappia f
+### Mitä tapahtuu, kun pelaaja painaa nappia f
 
 Pelitilan ollessa käynnissä, pelistä saa pisteitä painamalla nappeja f, g, h ja j sopivassa rytmissä. Kun pelaaja painaa esimerkiksi nappia f, GameWindow tarkistaa onko osumaa tapahtunut, ja jos on, se laskee osuman arvosanan ja antaa siitä pisteet. Lisäksi pelinäytölle ilmestyy uusimman osuman arvosanan nimi ja kokonaispistemäärä kasvaa.
 
 ![painetaan f](kuvat/pelaajapainaaf.png)
 
-#### Miten pelin tulokset käsitellään biisin loputtua
+### Miten pelin tulokset käsitellään biisin loputtua
 
 Kun biisi loppuu, peli palauttaa pelaajan tulokset. Sitten rytmipelin main päivittää records_handlerin tarjoamin metodein uudet tulokset kappaleen ennätysten top 10 -listaan ja näyttää sekä pelaajan omat tulokset, että top 10 -tulokset.
 
