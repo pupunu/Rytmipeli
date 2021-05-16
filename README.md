@@ -2,6 +2,8 @@
 
 Sovellus on peli, jossa painellaan nappeja musiikin tahtiin. Mitä paremmin pysyy rytmissä, sitä paremmat pisteet saa. Pelissä parhaat pisteet tallentuvat ja muiden pelaajien top 10 -pisteitä pääsee katsomaan. Pelimekaniikka muistuttaa ポップンミュージック-rytmipeliä.
 
+![kuva pelistä](/dokumentaatio/kuvat/demokuva.png)
+
 ## Python-versio
 Sovellus on suunniteltu toimimaan python 3.6.0:lla. Vanhemmilla versioilla saattaa olla ongelmia suorittaa ohjelmaa.
 
