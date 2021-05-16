@@ -3,13 +3,13 @@
 ## Ohjelman toiminnallinen rakenne
 
 Ohjelman (vanhentunut) pakkauskaavio.
-![pakkauskaavio](pakkauskaavio.png)
+![pakkauskaavio](kuvat/pakkauskaavio.png)
 
 ### Sekvenssikaaviot
 #### Ohjelman perustoiminnallisuus
 
-![main-sekvenssikaavio](pelinmain.jpg)
+![main-sekvenssikaavio](kuvat/pelinmain.jpg)
 
 #### Mitä tapahtuu, kun pelaaja painaa nappia f
 
-![painetaan f](pelaajapainaaf.jpg)
+![painetaan f](kuvat/pelaajapainaaf.jpg)
