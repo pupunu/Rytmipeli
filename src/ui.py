@@ -1,14 +1,12 @@
-# class UI:
-
-# tänne toteutetaan visuaalinen
-# käyttöliittymä nimen kysymiselle,
-# biisin valinnalle ja tulosten näyttämiselle
-
 def get_player_name():
-    print('Anna nimesi')
+    print("Anna nimesi.")
+    print("Voit myös sulkea pelin komennolla 'sulje'\n")
     name = input()
+    print()
     if name == '':
         return 'Vierailija'
+    elif name == 'sulje':
+        return False
     else:
         return name
 
@@ -22,9 +20,14 @@ def choose_song(songlist):
 
     while True:
         print('Valitse biisi')
+        print("Voit myös poistua pelistä komennolla 'poistu'\n")
+
         songname = input()
+        print()
         if songname in songlist:
             return songlist[songname]
+        elif songname == 'poistu':
+            return False
         print('epäkelpo nimi\n')
 
 

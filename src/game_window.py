@@ -15,15 +15,17 @@ class GameWindow(window.Window):
     '''Luokka, joka huolehtii pelin visuaalisista elementeistä
     '''
 
-    def __init__(self, caption, player_name):
+    def __init__(self, player_name, notes):
         ''' Luokan konstruktori, joka luo uuden peli-ikkunan.
 
         Args:
-            caption: ikkunan yläreunaan tuleva teksti
             player_name: pelaajan nimi
+            notes: pelissä olevat nuottirivit
         '''
 
-        super(GameWindow, self).__init__(caption=caption)
+        self.notes = notes
+
+        super(GameWindow, self).__init__(caption='rytmipeli')
 
         # luodaan tekstikentät
         self.feedback_label = text.Label(
@@ -44,8 +46,6 @@ class GameWindow(window.Window):
         self.background = sprite.Sprite(bkgr_img, x=0, y=0)
 
         # luodaan maalitaulut
-        self.target_circles = []
-
         targetF_img = image.load('data/graphics/maaliF.png')
         targetG_img = image.load('data/graphics/maaliG.png')
         targetH_img = image.load('data/graphics/maaliH.png')
@@ -56,10 +56,7 @@ class GameWindow(window.Window):
         targetH = sprite.Sprite(targetH_img, x=250, y=50)
         targetJ = sprite.Sprite(targetJ_img, x=350, y=50)
 
-        self.target_circles.append(targetF)
-        self.target_circles.append(targetG)
-        self.target_circles.append(targetH)
-        self.target_circles.append(targetJ)
+        self.target_circles = targetF, targetG, targetH, targetJ
 
         for target in self.target_circles:
             target.anchor_y = 25
@@ -74,11 +71,10 @@ class GameWindow(window.Window):
 
         self.feedback_label.text = SCORE_FEEDBACK[score]
 
-    def add_note_to_row(self, notes, i):
+    def add_note_to_row(self, i):
         '''Nuottien listaan uuden nuotin
 
         Args:
-            notes: lista nuoteista
             i: minkä indeksin jonoon nuotti lisätään
         '''
 
@@ -86,21 +82,18 @@ class GameWindow(window.Window):
         note = sprite.Sprite(self.notes_images[i], x=x, y=480+self.notes_images[i].height)
         note.anchor_x = 'center'
         note.anchor_y = 'center'
-        notes[i].append(note)
+        self.notes[i].append(note)
 
-    def draw_all(self, notes):
-        '''Piirtää kaiken tarvittavan näytölle
 
-        Args:
-            notes: pelissä hetkellä olevat nuotit
-        '''
-
+    def on_draw(self):
+        self.clear()
+        
         self.background.draw()
 
         for target in self.target_circles:
             target.draw()
 
-        for note in reduce(lambda a, b: a+b, notes, []):
+        for note in reduce(lambda a, b: a+b, self.notes, []):
             note.draw()
 
         self.feedback_label.draw()

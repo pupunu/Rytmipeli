@@ -4,7 +4,11 @@ from game_window import GameWindow
 
 
 def run(song, player_name):
-    win = GameWindow(caption='rytmipeli', player_name=player_name)
+
+    #nuotit tallennetaan tähän
+    notes = [], [], [], []
+
+    win = GameWindow(player_name=player_name, notes=notes)
 
     # biisin alustus
     song.current_beat = -1
@@ -16,16 +20,29 @@ def run(song, player_name):
     player.queue(audio)
     player.seek(0)
 
-    #nuotit tallennetaan tähän
-    notes = [], [], [], []
 
     points = {'brutal': 0, 'hard': 0, 'normal': 0,
               'easy': 0, 'weak': 0, 'total': 0}
 
-    @win.event
-    def on_draw():
-        win.clear()
-        win.draw_all(notes)
+
+    def drop_notes(dt):
+        for noterow in notes:
+            for note in noterow:
+                note.y -= 80*dt
+                is_hit, message = check_floor_hit(note)
+                if is_hit:
+                    win.feedback_label.text = message
+                    noterow.remove(note)
+
+    def add_note(_):
+        beat = song.get_next_beat()
+        if beat:
+            for i, rowvalue in enumerate(beat):
+                if rowvalue == '1':
+                    win.add_note_to_row(i)
+        else:
+            if notes == ([], [], [], []):
+                clock.schedule_once(lambda a: win.close(), 1)
 
     @win.event
     def on_key_press(symbol, modifiers):
@@ -43,22 +60,6 @@ def run(song, player_name):
             win.update_feedback(score)
 
         win.points_label.text = str(points['total'])
-
-    def drop_notes(dt):
-        for noterow in notes:
-            for note in noterow:
-                note.y -= 80*dt
-                is_hit, message = check_floor_hit(note)
-                if is_hit:
-                    win.feedback_label.text = message
-                    noterow.remove(note)
-
-    def add_note(_):
-        beat = song.get_next_beat()
-        if beat:
-            for i in range(4):
-                if beat[i] == '1':
-                    win.add_note_to_row(notes, i)
 
     #jotta biisi alkaisi oikeaan aikaa, tässä säädetään offset
     if song.offset > 0:
