@@ -76,3 +76,6 @@ Pelitilan ollessa käynnissä, pelistä saa pisteitä painamalla nappeja f, g, h
 Kun biisi loppuu, peli palauttaa pelaajan tulokset. Sitten rytmipelin main päivittää records_handlerin tarjoamin metodein uudet tulokset kappaleen ennätysten top 10 -listaan ja näyttää sekä pelaajan omat tulokset, että top 10 -tulokset.
 
 ![kun biisi loppuu, mitä tuloksille tapahtuu](kuvat/tulokset.png)
+
+## Korjattavaa ja parannettavaa
+GameWindow:n ja gamen suhde on tällä hetkellä hiukan outo, koska käytännössä GameWindow hoitaa lähes kaiken peliin liittyvän ja game toimii vain välikätenä. Tämä olisi ihan hyvä korjata.
