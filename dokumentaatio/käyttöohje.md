@@ -30,3 +30,9 @@ Kun olet valinnut biisin, pelinäkymä avautuu ja pääset pelaamaan. Pelissä y
 (tällä hetkellä biisin loppuessa ikkuna ei vielä sulkeudu, joten nuottien loppuessa sulje ikkuna)
 
 Pelin jälkeen näet omat pisteesi ja voit verrata niitä muiden pisteisiin. Pisteet ovat laitekohtaisia. Sitten voit valita uuden biisin.
+
+## Pelin sulkeminen
+
+- Biisin voi jättää kesken sulkemalla peli-ikkunan.
+- Biisinvalinnasta pääsee pois komennolla 'poistu'.
+- Nimenvalintatilassa koko ohjelman saa suljettua komennolla 'sulje'.
