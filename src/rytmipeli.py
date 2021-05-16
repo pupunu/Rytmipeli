@@ -5,6 +5,8 @@ from records_handler import chech_if_records_dir_exist, update_records
 
 
 def main():
+    '''Funktio joka käynnistää pelin ja pitää sitä pystyssä
+    '''
     chech_if_records_dir_exist()
 
     songlist = load_songs(directorypath='data/songs/')

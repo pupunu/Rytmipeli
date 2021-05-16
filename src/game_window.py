@@ -86,6 +86,8 @@ class GameWindow(window.Window):
 
 
     def on_draw(self):
+        '''Funktio joka huolehtii että ikkunaan piirretään oikeat asiat
+        '''
         self.clear()
         
         self.background.draw()

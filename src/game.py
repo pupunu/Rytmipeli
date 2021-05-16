@@ -4,13 +4,20 @@ from game_window import GameWindow
 
 
 def run(song, player_name):
+    '''Funktio, joka laittaa itse pelitilan käyntiin
 
-    #nuotit tallennetaan tähän
+    Args:
+        song: song-olio jota aletaan pelata
+        player_name: pelaajan nimi
+
+    Returns:
+        points: dictionary jossa listattu montako kertaa on saanut tietyn osuman arvosanan ja yhteispistemäärä
+    '''
+
     notes = [], [], [], []
 
     win = GameWindow(player_name=player_name, notes=notes)
 
-    # biisin alustus
     song.current_beat = -1
     if song.steps == []:
         song.load_steps()
@@ -26,6 +33,11 @@ def run(song, player_name):
 
 
     def drop_notes(dt):
+        '''Funktio joka tiputtaa pelikentällä olevia nuotteja vähitellen alaspäin
+        
+        Args:
+            dt: deltatime
+        '''
         for noterow in notes:
             for note in noterow:
                 note.y -= 80*dt
@@ -35,6 +47,8 @@ def run(song, player_name):
                     noterow.remove(note)
 
     def add_note(_):
+        '''Funktio, joka lisää uusia nuotteja tietyin väliajoin pelikentälle
+        '''
         beat = song.get_next_beat()
         if beat:
             for i, rowvalue in enumerate(beat):
@@ -46,6 +60,12 @@ def run(song, player_name):
 
     @win.event
     def on_key_press(symbol, modifiers):
+        '''Funktio joka tarvkistaa näppäinpainallukset
+        
+        Args:
+            symbol: painettu näppäin
+            modifiers: onko ctrl, shift tai alt ollut pohjassa
+        '''
         score = False
         if symbol == window.key.F:
             score = check_for_hits(notes[0])
@@ -61,7 +81,6 @@ def run(song, player_name):
 
         win.points_label.text = str(points['total'])
 
-    #jotta biisi alkaisi oikeaan aikaa, tässä säädetään offset
     if song.offset > 0:
         clock.schedule_once(lambda a: player.play(), song.offset)
         clock.schedule_interval(add_note, 60.0/song.speed)

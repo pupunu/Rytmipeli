@@ -60,6 +60,9 @@ def load_songs(directorypath):
 
     Args:
         directorypath: polku mistä biisit löytyvät
+    
+    Returns:
+        songlist: dictionary, jossa {kappaleen nimi: kappaletta vastaava song-olio}
     '''
 
     songlist = {}
