@@ -18,7 +18,11 @@ Ohjelmassa on neljä erillistä tilaa.
 
 Alkutilasta, kappaleen valitsemisesta ja tulosten katselusta vastaa rytmipeli ui:n avulla. Pelitilasta vastaa kokonaan moduuli game, joka hyödyntää game_logicia ja GameWindowta pelin pyörittämisessä. GameWindow vastaa sekä asioiden näyttäisestä ruudulla, että näppäinpainallusten tarkistamisesta.
 
-### Päätoiminnallisuudet ja sekvenssikaaviot
+## Sovelluslogiikka
+
+Pelin peruspalana toimivat Song-oliot, joihin on tallennettu biisien nuotit ja tiedost musiikista. Pelin ollessa käynnissä pelattavasta biisistä otetaan rivi kerrallaan seuraavat nuotit ja asetellaan ne pelikentälle, jossa ne vähitellen tippuvat alaspäin.
+
+## Päätoiminnallisuudet ja sekvenssikaaviot
 #### Ohjelman perustoiminnallisuus
 
 Kun peli lähtee käyntiin tapahtuu seuraavasti:
