@@ -31,7 +31,7 @@ Pelitilan ollessa käynnissä, pelistä saa pisteitä painamalla nappeja f, g, h
 
 ![painetaan f](kuvat/pelaajapainaaf.png)
 
-## Miten pelin tulokset käsitellään biisin loputtua
+#### Miten pelin tulokset käsitellään biisin loputtua
 
 Kun biisi loppuu, peli palauttaa pelaajan tulokset. Sitten rytmipelin main päivittää records_handlerin tarjoamin metodein uudet tulokset kappaleen ennätysten top 10 -listaan ja näyttää sekä pelaajan omat tulokset, että top 10 -tulokset.
 
