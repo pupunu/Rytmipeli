@@ -36,3 +36,62 @@ Pelin jälkeen näet omat pisteesi ja voit verrata niitä muiden pisteisiin. Pis
 - Biisin voi jättää kesken sulkemalla peli-ikkunan.
 - Biisinvalinnasta pääsee pois komennolla 'poistu'.
 - Nimenvalintatilassa koko ohjelman saa suljettua komennolla 'sulje'.
+
+# Uusien biisien tekeminen
+
+## Biisin tiedoston luonti
+
+Tehdäksesi uuden biisin, luo sitä vastaava tekstitiedosto hakemistoon data/songs/ ja lisää samaan hakemistoon biisin musiikkitiedosto .wav-muodossa. Kopioi tekstitiedostoon seuraavat asiat:
+
+```bash
+name:
+audiofile:
+speed:
+offset:
+steps:
+```
+Nyt voit lisätä tekstitiedostoon biisin nimen, musiikkitiedoston nimen, nopeuden beats per minute -muodossa ja offsetin.
+**Ole tarkka, ettet lisää ylimääräisiä välilyöntejä kaksoispisteiden lähelle.**
+
+Malliesimerkki biisitiedostosta:
+
+```bash
+name:hyvä biisi
+audiofile:hyvamusa.wav
+speed:90
+offset:0.0
+steps:
+```
+## Nuottien lisääminen
+
+Nyt voit alkaa kirjoittaa nuotteja tiedostoon. Rivin "steps:" jälken tulevat rivit ovat nuottien rivejä. Jokainen rivi vastaa yhtä kappaleen iskua ja rivillä on oltava neljä merkkiä, jotka ovat joko 1 tai 0. Jokainen neljästä merkistä vastaa yhtä riviä pelissä. Ensimmäinen vastaa riviä f, toinen riviä g, kolmas riviä h ja neljäs riviä j. 1 tarkoittaa, että rivillä on nuotti tällä iskulla, 0 tarkoittaa että nuottia ei ole.
+
+Esimerkiksi rivi 1111 tarkoittaa että iskulla tulee jokaiselle riville nuotti. Rivi 0000 taas tarkoittaa, että iskulla ei lisätä nuotteja.
+
+Esimerkkitiedostomme voisikin nyt näyttää tältä:
+
+```bash
+name:hyvä biisi
+audiofile:hyvamusa.wav
+speed:90
+offset:0.0
+steps:
+0000
+0000
+0101
+1110
+1000
+0001
+0000
+0000
+1001
+```
+
+## Mikä on offset ja miten käyttää sitä
+
+Offset on kappaleen ajoituksen hienosäätöä varten. Äänitiedostot harvoin alkavat täydellisesti pelin kannalta niin, että ensimmäine rivi osuu ensimmäiselle iskulle. Tätä varten kappaleelle annetaan offset.
+
+Jos nuotit alkavat liian aikaisin, laita offsettiä pienemmäksi, mahdollisesti negatiiviseksi.
+Jos nuotit alkavat liian myöhään, aseta offset isommaksi.
+
+Parhaiten sopivan offsetin löytää kokeilemalla :)
