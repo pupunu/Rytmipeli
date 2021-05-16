@@ -14,7 +14,7 @@ Sovelluksessa on yksi käyttäjätyyppi eli *pelaaja*.
 
 Sovelluksessa on neljä tilaa: kirjautuminen, kappaleen valinta, pelitila ja tulosten esittäminen.
 
-![kuva käyttöliittymästä](kayttoliittyma.png)
+![kuva käyttöliittymästä](kuvat/kayttoliittyma.png)
 **Huom** itse rytmipelin konkreettiseen ulkonäköön voi tulla muutoksia
 
 ## Persuversion ominaisuudet
